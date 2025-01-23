@@ -1,0 +1,29 @@
+<!DOCTYPE html>   
+    <head>    
+          <title>Ile sekund</title>    
+          <meta charset="utf-8">   
+     </head>  
+ <body> 
+ <div style="color:green;font-size:34px;"> 
+    <script language="JavaScript"> 
+        var liczba1=prompt("D1_cze",""); 
+        var liczba2=prompt("G1_cze",""); 
+        var liczba3=prompt("D2_cze",""); 
+        var liczba4=prompt("G2_cze",""); 
+        var DniNaGodziny; 
+        var PozostaleGodziny;
+        var Calosc_w_Godzinach;
+        var sekundy;
+        var a=parseFloat(liczba1); 
+        var b=parseFloat(liczba2); 
+        var c=parseFloat(liczba3);
+        var d=parseFloat(liczba4);
+        DniNaGodziny=(a-c)*24; 
+        PozostaleGodziny=(b-d);
+        Calosc_w_Godzinach= DniNaGodziny + PozostaleGodziny;
+        sekundy = Calosc_w_Godzinach * 3600;
+        document.write("ilość sekund= "+sekundy); 
+    </script> 
+ </div> 
+</body> 
+</html> 
