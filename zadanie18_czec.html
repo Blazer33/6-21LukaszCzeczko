@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Użycie funkcji</title>
+</head>
+<body>
+    <div style="color:navy; font-size:30px;">
+        <script language="JavaScript">
+            var a = parseFloat(prompt("Podaj a:", ""));
+            var b = parseFloat(prompt("Podaj b:", ""));
+            
+            function suma_cze(a, b) {
+                return a + b;
+            }
+
+            function odejmowanie_cze(a, b) {
+                return a - b;
+            }
+
+            function mnozenie_cze(a, b) {
+                return a * b;
+            }
+
+            function od_kwadratu_cze(a, b) {
+                return "Kwadrat " + a + " = " + (a * a) + "<br>Kwadrat " + b + " = " + (b * b);
+            }
+
+            function reszta_z_dzielenia_a_przez_b_cze(a, b) {
+                return a % b;
+            }
+
+            document.write("Suma: " + suma_cze(a, b) + "<br>");
+            document.write("Różnica: " + odejmowanie_cze(a, b) + "<br>");
+            document.write("Iloczyn: " + mnozenie_cze(a, b) + "<br>");
+            document.write("Kwadraty:<br>" + od_kwadratu_cze(a, b) + "<br>");
+            document.write("Reszta z dzielenia: " + reszta_z_dzielenia_a_przez_b_cze(a, b) + "<br>");
+        </script>
+    </div>
+</body>
+</html>

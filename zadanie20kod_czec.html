@@ -1,0 +1,63 @@
+
+<body>
+    <h2>KOD HTML zadanie 20</h2>
+    <textarea cols="82" rows="35" id="test">
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obliczanie długości boków trójkąta</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <script type="text/javascript">
+        function AB_cze() {
+            var xa_cze = parseFloat(document.getElementById('xa').value);
+            var ya_cze = parseFloat(document.getElementById('ya').value);
+            var xb_cze = parseFloat(document.getElementById('xb').value);
+            var yb_cze = parseFloat(document.getElementById('yb').value);
+            var ab = Math.sqrt(Math.pow((xb_cze - xa_cze), 2) + Math.pow((yb_cze - ya_cze), 2));
+            document.getElementById("wynik").innerHTML = "Długość AB = " + ab.toFixed(2);
+        }
+
+        function BC_cze() {
+            var xb_cze = parseFloat(document.getElementById('xb').value);
+            var yb_cze = parseFloat(document.getElementById('yb').value);
+            var xc_cze = parseFloat(document.getElementById('xc').value);
+            var yc_cze = parseFloat(document.getElementById('yc').value);
+            var bc = Math.sqrt(Math.pow((xc_cze - xb_cze), 2) + Math.pow((yc_cze - yb_cze), 2));
+            document.getElementById("wynik").innerHTML = "Długość BC = " + bc.toFixed(2);
+        }
+
+        function AC_cze() {
+            var xa_cze = parseFloat(document.getElementById('xa').value);
+            var ya_cze = parseFloat(document.getElementById('ya').value);
+            var xc_cze = parseFloat(document.getElementById('xc').value);
+            var yc_cze = parseFloat(document.getElementById('yc').value);
+            var ac = Math.sqrt(Math.pow((xc_cze - xa_cze), 2) + Math.pow((yc_cze - ya_cze), 2));
+            document.getElementById("wynik").innerHTML = "Długość AC = " + ac.toFixed(2);
+        }
+    </script>
+
+    <h1>Obliczanie długości boków trójkąta</h1>
+    <p>Podaj współrzędne punktów:</p>
+    <label>A (xa, ya): </label> 
+    <input type="text" id="xa" placeholder="xa"> 
+    <input type="text" id="ya" placeholder="ya"><br><br>
+
+    <label>B (xb, yb): </label> 
+    <input type="text" id="xb" placeholder="xb"> 
+    <input type="text" id="yb" placeholder="yb"><br><br>
+
+    <label>C (xc, yc): </label> 
+    <input type="text" id="xc" placeholder="xc"> 
+    <input type="text" id="yc" placeholder="yc"><br><br>
+
+    <input type="button" value="Oblicz AB" onclick="AB_cze()">
+    <input type="button" value="Oblicz BC" onclick="BC_cze()">
+    <input type="button" value="Oblicz AC" onclick="AC_cze()"><br><br>
+
+    <div id="wynik" style="color:blue; font-size:20px;"></div>
+</body>
+</html>

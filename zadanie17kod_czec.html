@@ -1,0 +1,64 @@
+<html>
+ <head>
+ <META HTTP-EQUIV="content-type" CONTENT="text/html; charset="utf-8">
+ </head>
+<body>
+    <h2>KOD HTML zadanie 17</h2>
+    <textarea cols="82" rows="35" id="test">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 17 - Łukasz Czeczko</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h2 { color: #333; }
+        .pytanie { font-weight: bold; text-decoration: underline; }
+        .odpowiedz { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h2>Zadanie 17 - Teoria</h2>
+
+    <p class="pytanie">1. Wymień cztery sposoby wyprowadzania danych w JS</p>
+    <p class="odpowiedz">- Z użyciem <strong>document.write()</strong><br>
+       - Z użyciem okienka <strong>alert()</strong><br>
+       - Do okienek formularza<br>
+       - Do tabeli</p>
+
+    <p class="pytanie">2. Czym jest funkcja w JS? Omów przy użyciu 4 podpunktów.</p>
+    <p class="odpowiedz">
+        - Jest to zbiór zgrupowanych instrukcji, które możemy uruchamiać poprzez podanie ich nazwy.<br>
+        - Każda funkcja po wywołaniu wykonuje swój wewnętrzny kod.<br>
+        - Funkcja może mieć argumenty, które wchodzą do jej wnętrza i są tam przetwarzane, np. <code>suma_kry(a, b)</code>.<br>
+        - Może (ale nie zawsze) zwrócić obliczoną wartość zapisaną po słowie kluczowym <code>return</code>.
+    </p>
+
+    <p class="pytanie">3. Omów metody getElementsByName, getElementById, getElementsByTagName.</p>
+    <table border="1">
+        <tr>
+            <th>Metoda</th>
+            <th>Opis</th>
+        </tr>
+        <tr>
+            <td><strong>getElementById("id")</strong></td>
+            <td>Dostęp do elementu o określonym identyfikatorze <code>id</code>.</td>
+        </tr>
+        <tr>
+            <td><strong>getElementsByTagName("znacznik")</strong></td>
+            <td>Dostęp do wszystkich elementów danego typu, np. <code>p</code> lub <code>div</code>.</td>
+        </tr>
+        <tr>
+            <td><strong>getElementsByName("nazwa")</strong></td>
+            <td>Dostęp do elementów o określonej wartości atrybutu <code>name</code>.</td>
+        </tr>
+    </table>
+
+    <p class="pytanie">4. Omów właściwości innerHTML, innerText, className.</p>
+    <ul>
+        <li><strong>innerHTML</strong> – umożliwia odczyt, modyfikację, wstawienie lub usunięcie kodu HTML wewnątrz elementu.</li>
+        <li><strong>innerText</strong> – określa ciąg znaków, który zostanie umieszczony w elemencie.</li>
+        <li><strong>className</strong> – pozwala określić klasę CSS przypisaną do danego elementu.</li>
+    </ul>
+</body>
+</html>
