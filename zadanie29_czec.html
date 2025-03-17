@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 29</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Zadanie 29</h1>
+
+    <h2>1. W jaki sposób można określić właściwość danego obiektu?</h2>
+    <p>Właściwość obiektu można określić na dwa sposoby:</p>
+    <ul>
+        <li><strong>Notacja kropkowa</strong></li>
+    </ul>
+    <pre>
+let osoba = { imie: "Łukasz", wiek: 18 };
+console.log(osoba.imie); 
+    </pre>
+    <ul>
+        <li><strong>Notacja nawiasowa</strong></li>
+    </ul>
+    <pre>
+let osoba = { imie: "Łukasz", wiek: 18 };
+console.log(osoba["wiek"]);
+    </pre>
+
+    <h2>2. W jaki sposób można odwołać się do pól i metod?</h2>
+    <p><strong>Do pól obiektu:</strong></p>
+    <pre>
+console.log(osoba.imie); 
+console.log(osoba["wiek"]); 
+    </pre>
+    <p><strong>Do metod:</strong></p>
+    <pre>
+let osoba = {
+    imie: "Łukasz",
+    przedstawSie: function() {
+        return "Cześć, mam na imię " + this.imie;
+    }
+};
+console.log(osoba.przedstawSie());
+    </pre>
+
+    <h2>3. Wymień cechy charakterystyczne konstruktora.</h2>
+    <ul>
+        <li>Jest funkcją służącą do tworzenia nowych obiektów.</li>
+        <li>Nazywany jest z wielkiej litery.</li>
+        <li>Używa <code>this</code> do przypisywania wartości polom obiektu.</li>
+        <li>Tworzenie obiektów odbywa się za pomocą <code>new</code>.</li>
+    </ul>
+
+    <h2>4. Konstruowanie obiektu na podstawie przykładu – obiekt ma trzy pola oraz jedną metodę.</h2>
+    <pre>
+let samochod = {
+    marka: "Toyota",
+    model: "Corolla",
+    rok: 2022,
+    pokazInformacje: function() {
+        return this.marka + " " + this.model + " z roku " + this.rok;
+    }
+};
+console.log(samochod.pokazInformacje()); 
+    </pre>
+
+    <h2>5. Znaczenie słowa <code>this</code>. Jak oddzielamy pola oraz metody?</h2>
+    <p><strong><code>this</code></strong> odnosi się do bieżącego obiektu i pozwala odwoływać się do jego pól i metod.</p>
+    <p><strong>Pola oraz metody</strong> oddzielamy przecinkami w deklaracji obiektu:</p>
+    <pre>
+let osoba = {
+    imie: "Anna",
+    wiek: 30,
+    przedstawSie: function() {
+        return "Mam na imię " + this.imie;
+    }
+};
+    </pre>
+
+    <h2>6. Konstruktor w JS na podstawie przykładu wraz z opisem.</h2>
+    <p>Konstruktor to specjalna funkcja służąca do tworzenia nowych obiektów.</p>
+    <pre>
+function Samochod(marka, model, rok) {
+    this.marka = marka;
+    this.model = model;
+    this.rok = rok;
+}
+let auto = new Samochod("Ford", "Focus", 2020);
+console.log(auto.marka); 
+    </pre>
+
+    <h2>7. Znaczenie słowa kluczowego <code>new</code> wraz z przykładem.</h2>
+    <p><code>new</code> tworzy nowy obiekt i przypisuje <code>this</code> do niego.</p>
+    <pre>
+function Osoba(imie, wiek) {
+    this.imie = imie;
+    this.wiek = wiek;
+}
+let osoba1 = new Osoba("Łukasz", 18);
+console.log(osoba1.imie);
+    </pre>
+
+    <h2>8. Znaczenie słowa kluczowego <code>prototype</code> wraz z przykładem i opisem.</h2>
+    <p><strong><code>prototype</code> pozwala dodawać metody i właściwości do wszystkich obiektów danego typu.</strong></p>
+    <pre>
+function Osoba(imie) {
+    this.imie = imie;
+}
+Osoba.prototype.przedstawSie = function() {
+    return "Cześć, jestem " + this.imie;
+};
+let osoba1 = new Osoba("Łukasz");
+console.log(osoba1.przedstawSie());
+    </pre>
+
+</body>
+</html>

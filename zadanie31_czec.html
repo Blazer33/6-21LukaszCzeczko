@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 30</title>
+    <script type="text/javascript">
+       
+        var Samochod = {
+            kolor: "Czerwony",
+            marka: "Toyota",
+            rok: 2022,
+            samochod_wyswietl_Czeczko: function () {
+                document.write("<h3>Obiekt: Samochod</h3>");
+                document.write("Kolor: " + this.kolor + "<br>");
+                document.write("Marka: " + this.marka + "<br>");
+                document.write("Rok: " + this.rok + "<br>");
+                document.write("Metoda: samochod_wyswietl_Czeczko()<br><br>");
+            }
+        };
+
+       
+        Samochod.moc = "150 KM";
+        Samochod.samochod_pokaz_Czeczko = function () {
+            document.write("<h3>Nowa właściwość i metoda dodana poza obiektem</h3>");
+            document.write("Nowa właściwość: Moc = " + this.moc + "<br>");
+            document.write("Nowa metoda: samochod_pokaz_Czeczko()<br><br>");
+        };
+    </script>
+</head>
+<body>
+    <h1>Zadanie 30</h1>
+
+    <script type="text/javascript">
+ 
+        Samochod.samochod_wyswietl_Czeczko();
+        Samochod.samochod_pokaz_Czeczko();
+    </script>
+</body>
+</html>

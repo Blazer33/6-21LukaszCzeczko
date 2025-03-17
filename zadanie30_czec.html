@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 30 - Programowanie obiektowe</title>
+
+
+    <script type="text/javascript">
+        var Samochod = {
+            kolor: "Czerwony",
+            marka: "Toyota",
+            rok: 2022,
+            samochod_wyswietl_Czeczko: function () {
+                document.write("<h3>Obiekt: Samochod</h3>");
+                document.write("Kolor: " + this.kolor + "<br>");
+                document.write("Marka: " + this.marka + "<br>");
+                document.write("Rok: " + this.rok + "<br><br>");
+            }
+        };
+
+        var Pociag = {
+            ile_wagonow: 10,
+            predkosc_maksymalna: "250 km/h",
+            trasa: "Warszawa - Kraków",
+            pociag_wyswietl_Czeczko: function () {
+                document.write("<h3>Obiekt: Pociag</h3>");
+                document.write("Ilość wagonów: " + this.ile_wagonow + "<br>");
+                document.write("Prędkość maksymalna: " + this.predkosc_maksymalna + "<br>");
+                document.write("Trasa: " + this.trasa + "<br><br>");
+            }
+        };
+
+        var Komputer = {
+            marka: "Dell",
+            procesor: "Intel i7",
+            ram: "16GB",
+            komputer_wyswietl_Czeczko: function () {
+                document.write("<h3>Obiekt: Komputer</h3>");
+                document.write("Marka: " + this.marka + "<br>");
+                document.write("Procesor: " + this.procesor + "<br>");
+                document.write("Pamięć RAM: " + this.ram + "<br><br>");
+            }
+        };
+
+        var Telefon = {
+            siec: "Play",
+            model: "Samsung Galaxy S23",
+            pojemnosc: "256GB",
+            telefon_wyswietl_Czeczko: function () {
+                document.write("<h3>Obiekt: Telefon</h3>");
+                document.write("Sieć: " + this.siec + "<br>");
+                document.write("Model: " + this.model + "<br>");
+                document.write("Pojemność: " + this.pojemnosc + "<br><br>");
+            }
+        };
+
+        var Wiezowiec = {
+            ile_pieter: 50,
+            lokalizacja: "Warszawa",
+            wysokosc: "200m",
+            wiezowiec_wyswietl_Czeczko: function () {
+                document.write("<h3>Obiekt: Wieżowiec</h3>");
+                document.write("Ilość pięter: " + this.ile_pieter + "<br>");
+                document.write("Lokalizacja: " + this.lokalizacja + "<br>");
+                document.write("Wysokość: " + this.wysokosc + "<br><br>");
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Zadanie 30 - Programowanie obiektowe</h1>
+
+    <script type="text/javascript">
+
+        Samochod.samochod_wyswietl_Czeczko();
+        Pociag.pociag_wyswietl_Czeczko();
+        Komputer.komputer_wyswietl_Czeczko();
+        Telefon.telefon_wyswietl_Czeczko();
+        Wiezowiec.wiezowiec_wyswietl_Czeczko();
+
+    </script>
+  
+</body>
+</html>

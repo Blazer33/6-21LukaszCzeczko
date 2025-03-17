@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function Student(nazwisko, imie, wiek, klasa) {
+            this.nazwisko = nazwisko;
+            this.imie = imie;
+            this.wiek = wiek;
+            this.klasa = klasa;
+        }
+        
+        Student.prototype.wypisz = function() {
+            alert(this.nazwisko + ' ' + this.imie + ', Wiek: ' + this.wiek + ', Klasa: ' + this.klasa);
+        };
+        
+        var student1 = new Student("Czeczko", "Łukasz", 18, "4A");
+        var student2 = new Student("Nowak", "Anna", 17, "3B");
+        var student3 = new Student("Wiśniewski", "Piotr", 19, "4C");
+        
+        Student.prototype.kierunek = "Informatyka"; 
+        Student.prototype.pokazKierunek = function() {
+            alert("Kierunek: " + this.kierunek);
+        };
+        
+        function pokazStudentow() {
+            student1.wypisz();
+            student2.wypisz();
+            student3.wypisz();
+        }
+        
+        function pokazKierunek() {
+            student1.pokazKierunek();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="pokazStudentow()">Pokaż Studentów</button>
+    <button onclick="pokazKierunek()">Pokaż Kierunek</button>
+</body>
+</html>
