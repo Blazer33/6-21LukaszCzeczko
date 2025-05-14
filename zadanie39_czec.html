@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Zadanie 39 - Czeczko</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<div style="color:green;font-size:20px;">
+    MENU:<br>
+    <font color="red">1-CZERWONY</font><br>
+    <font color="blue">2-NIEBIESKI</font><br>
+</div>
+<input type="button" name="czeczko" value="Oblicz" onclick="fun_cze()" />
+<script>
+function fun_cze() {
+    var x_cze = prompt("Podaj kolor", "");
+    if (x_cze == 1 || x_cze.toLowerCase() == "czerwony") {
+        document.write('<h1 style="color:red;">Wczytałeś kolor czerwony</h1><br />');
+    } else if (x_cze == 2 || x_cze.toLowerCase() == "niebieski") {
+        document.write('<h6 style="color:blue;">Wczytałeś kolor niebieski</h6><br />');
+    } else {
+        document.write('<p style="color:red;">Nieprawidłowy kolor</p><br />');
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<body>
+    <h2>KOD HTML zadanie 38</h2>
+    <textarea cols="82" rows="35" id="test">
+        <!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Zadanie 38 - Czeczko</title>
+    <meta charset="utf-8">
+</head>
+<body style="background-color:silver;">
+<div style="color:green;font-size:46px;">
+    <script language="JavaScript">
+        document.write("Imię: Łukasz, Nazwisko: Czeczko<br>");
+        var liczba1 = 6;
+        var liczba2 = 13;
+        var liczba3 = 7;
+        var liczba4 = 11;
+        document.write("liczba1 = " + liczba1 + "<br>");
+        document.write("liczba2 = " + liczba2 + "<br>");
+        document.write("liczba3 = " + liczba3 + "<br>");
+        document.write("liczba4 = " + liczba4 + "<br>");
+    </script>
+</div>
+<div style="color:red;font-size:46px;">
+    <script language="JavaScript">
+        document.write("MENU:<br>");
+        document.write("Opcja " + liczba1 + ": Teoria o operatorach logicznych<br>");
+        document.write("Opcja " + (liczba3 + 20) + ": Sprawdzanie, czy liczba należy do przedziału (" + liczba1 + "; " + liczba2 + "]<br>");
+        document.write("Opcja 65: Sprawdzanie, czy liczba należy do przedziału (-∞, " + liczba1 + ") ∪ [" + liczba2 + ", +∞)<br>");
+        var opcja_cze = parseInt(prompt("Podaj numer opcji:", ""));
+        if (opcja_cze == 6) {
+            document.write("<font color=\"blue\" size=\"7\">Jesteś w opcji 6 --> Teoria o operatorach logicznych</font><br>");
+            document.write("<font color=\"green\" size=\"7\">Operator &&: prawda, gdy oba warunki są prawdziwe</font><br>");
+            document.write("<font color=\"green\" size=\"7\">Operator ||: prawda, gdy przynajmniej jeden warunek jest prawdziwy</font><br>");
+            document.write("<font color=\"green\" size=\"7\">Operator !: negacja warunku</font><br>");
+        } else if (opcja_cze == 27) {
+            var liczba_cze = parseFloat(prompt("Podaj liczbę do sprawdzenia:", ""));
+            if (liczba_cze > liczba1 && liczba_cze <= liczba2) {
+                document.write("<font color=\"green\" size=\"7\">Liczba " + liczba_cze + " należy do przedziału (" + liczba1 + "; " + liczba2 + "]</font><br>");
+            } else {
+                document.write("<font color=\"red\" size=\"7\">Liczba " + liczba_cze + " nie należy do przedziału (" + liczba1 + "; " + liczba2 + "]</font><br>");
+            }
+        } else if (opcja_cze == 65) {
+            var liczba_cze = parseFloat(prompt("Podaj liczbę do sprawdzenia:", ""));
+            if (liczba_cze < liczba1 || liczba_cze >= liczba2) {
+                document.write("<font color=\"green\" size=\"7\">Liczba " + liczba_cze + " należy do przedziału (-∞, " + liczba1 + ") ∪ [" + liczba2 + ", +∞)</font><br>");
+            } else {
+                document.write("<font color=\"red\" size=\"7\">Liczba " + liczba_cze + " nie należy do przedziału (-∞, " + liczba1 + ") ∪ [" + liczba2 + ", +∞)</font><br>");
+            }
+        } else {
+            document.write("<font color=\"red\" size=\"7\">Nie ma takiej opcji</font><br>");
+        }
+    </script>
+</div>
+</body>
+</html>

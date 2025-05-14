@@ -1,0 +1,109 @@
+<body>
+    <h2>KOD HTML zadanie 40</h2>
+    <textarea cols="82" rows="35" id="test">
+        <!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Zadanie 40 - Czeczko</title>
+    <meta charset="utf-8">
+    <style>
+        h1 { text-transform: uppercase; }
+    </style>
+</head>
+<body>
+<h1>Proste działania - Czeczko, klasa 3k</h1>
+<label for="a">Podaj pierwszą liczbę:</label> <input type="number" id="a">
+<br><br>
+<label for="b">Podaj drugą liczbę:</label> <input type="number" id="b">
+<br><br>
+<input type="button" value="DODAWANIE" onclick="suma_cze()">
+<input type="button" value="ODEJMOWANIE" onclick="roznica_cze()">
+<input type="button" value="MNOŻENIE" onclick="iloczyn_cze()">
+<input type="button" value="DZIELENIE" onclick="iloraz_cze()">
+<input type="button" value="TEORIA-Czeczko" onclick="teoria_cze()">
+<div id="wynik" style="margin-top:20px;"></div>
+<script>
+function suma_cze() {
+    var a = document.getElementById("a").value;
+    var b = document.getElementById("b").value;
+    if (a == "" || b == "") {
+        document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+    } else {
+        a = parseFloat(a);
+        b = parseFloat(b);
+        var suma = (a + b).toFixed(2);
+        document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma;
+    }
+}
+function roznica_cze() {
+    var a = document.getElementById("a").value;
+    var b = document.getElementById("b").value;
+    if (a == "" || b == "") {
+        document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+    } else {
+        a = parseFloat(a);
+        b = parseFloat(b);
+        var roznica = (a - b).toFixed(2);
+        document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica;
+    }
+}
+function iloczyn_cze() {
+    var a = document.getElementById("a").value;
+    var b = document.getElementById("b").value;
+    if (a == "" || b == "") {
+        document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+    } else {
+        a = parseFloat(a);
+        b = parseFloat(b);
+        var iloczyn = (a * b).toFixed(2);
+        document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn;
+    }
+}
+function iloraz_cze() {
+    var a = document.getElementById("a").value;
+    var b = document.getElementById("b").value;
+    if (a == "" || b == "") {
+        document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+    } else {
+        a = parseFloat(a);
+        b = parseFloat(b);
+        if (b == 0) {
+            document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+        } else {
+            var iloraz = (a / b).toFixed(2);
+            document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz;
+        }
+    }
+}
+function teoria_cze() {
+    document.getElementById("wynik").innerHTML = "";
+    document.getElementById("wynik").innerHTML += '<font color="green" size="4">Pierwsza linia kodu</font><br>';
+    document.getElementById("wynik").innerHTML += '<font color="red" size="4">&lt;label for="a"&gt;Podaj pierwszą liczbę:&lt;/label&gt; &lt;input type="number" id="a"&gt;</font><br>';
+    document.getElementById("wynik").innerHTML += '<font color="green" size="4">Wytłumaczenie:</font><br>';
+    document.getElementById("wynik").innerHTML += '<font color="red" size="4">Wykonanie numerycznego pola formularza z opisem "Podaj pierwszą liczbę:" a nazwa pola to "a"</font><br>';
+
+    document.getElementById("wynik").innerHTML += '<font color="green" size="4">Druga linia kodu</font><br>';
+    document.getElementById("wynik").innerHTML += '<font color="red" size="4">&lt;input type="button" value="DODAWANIE" onclick="suma_cze()"&gt;</font><br>';
+    document.getElementById("wynik").innerHTML += '<font color="green" size="4">Wytłumaczenie:</font><br>';
+    document.getElementById("wynik").innerHTML += '<font color="red" size="4">Wykonanie przycisku o nazwie DODAWANIE, kliknięcie myszką uruchamia funkcję suma_cze()</font><br>';
+
+    document.getElementById("wynik").innerHTML += '<font color="green" size="4">Trzecia linia kodu</font><br>';
+    document.getElementById("wynik").innerHTML += '<font color="red" size="4">var a = document.getElementById("a").value;</font><br>';
+    document.getElementById("wynik").innerHTML += '<font color="green" size="4">Wytłumaczenie:</font><br>';
+    document.getElementById("wynik").innerHTML += '<font color="red" size="4">Wpisanie do zmiennej "a" wartości z elementu o Id "a"</font><br>';
+
+    document.getElementById("wynik").innerHTML += '<font color="green" size="4">Czwarta linia kodu</font><br>';
+    document.getElementById("wynik").innerHTML += '<font color="red" size="4">if (a == "" || b == "")</font><br>';
+    document.getElementById("wynik").innerHTML += '<font color="green" size="4">Wytłumaczenie:</font><br>';
+    document.getElementById("wynik").innerHTML += '<font color="red" size="4">Sprawdzenie czy pola "a" lub "b" są puste</font><br>';
+
+    document.getElementById("wynik").innerHTML += '<font color="green" size="4">Piąta linia kodu</font><br>';
+    document.getElementById("wynik").innerHTML += '<font color="red" size="4">document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma;</font><br>';
+    document.getElementById("wynik").innerHTML += '<font color="green" size="4">Wytłumaczenie:</font><br>';
+    document.getElementById("wynik").innerHTML += '<font color="red" size="4">Pobranie wartości Id o nazwie "wynik" i wyprowadzenie w oknie przeglądarki tekstu "Wynik działania wynosi: " oraz wartości zmiennej suma</font><br>';
+}
+</script>
+</body>
+</html>
