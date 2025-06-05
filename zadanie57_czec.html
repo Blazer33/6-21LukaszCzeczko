@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 57 - Łukasz Czeczko</title>
+</head>
+<body>
+    <div style="color:black;font-size:20px;">
+        <script language="JavaScript">
+            for (var i_cze = 6; i_cze <= 21; i_cze++) {
+                var pierw2 = Math.sqrt(i_cze).toFixed(2);
+                var pierw4 = Math.sqrt(Math.sqrt(i_cze)).toFixed(2);
+                document.write("i=" + i_cze + " pierw_2(" + i_cze + ")=" + pierw2 + " pierw_4(" + i_cze + ")=" + pierw4 + "<br>");
+                if ((i_cze - 5) % 3 == 0) {
+                    document.write("<br>");
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 54 - Łukasz Czeczko</title>
+</head>
+<body>
+    <pre>
+        <script language="JavaScript">
+            var imie_cze = prompt("Podaj imię:", "");
+            var nazwisko_cze = prompt("Podaj nazwisko:", "");
+            var a_cze = (nazwisko_cze.length % 4) + 5;
+            var b_cze = (imie_cze.length % 6) + 20;
+            // Górna krawędź
+            for (var i_cze = 1; i_cze <= b_cze; i_cze++) {
+                document.write("*");
+            }
+            document.write("<br>");
+            // Środek
+            for (var i_cze = 1; i_cze <= a_cze - 2; i_cze++) {
+                document.write("*");
+                for (var j_cze = 1; j_cze <= b_cze - 2; j_cze++) {
+                    document.write("&nbsp;");
+                }
+                document.write("*<br>");
+            }
+            // Dolna krawędź
+            for (var i_cze = 1; i_cze <= b_cze; i_cze++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        </script>
+    </pre>
+</body>
+</html>

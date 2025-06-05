@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 47 - Łukasz Czeczko</title>
+</head>
+<body>
+    <div style="color:black;font-size:20px;">
+        <script language="JavaScript">
+            do {
+                var a_cze = parseFloat(prompt("Podaj bok a:", ""));
+                var b_cze = parseFloat(prompt("Podaj bok b:", ""));
+                var c_cze = parseFloat(prompt("Podaj bok c:", ""));
+            } while (!(a_cze > 0 && b_cze > 0 && c_cze > 0 && a_cze + b_cze > c_cze && a_cze + c_cze > b_cze && b_cze + c_cze > a_cze));
+            document.write("Podane boki: a=" + a_cze + ", b=" + b_cze + ", c=" + c_cze + " tworzą trójkąt.<br>");
+        </script>
+    </div>
+</body>
+</html>

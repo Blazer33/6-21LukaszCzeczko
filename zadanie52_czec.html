@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 52 - Łukasz Czeczko</title>
+</head>
+<body>
+    <pre>
+        <script language="JavaScript">
+            var a_cze = 8;
+            var b_cze = 20;
+            // Górna krawędź
+            for (var i_cze = 1; i_cze <= b_cze; i_cze++) {
+                document.write("*");
+            }
+            document.write("<br>");
+            // Środek
+            for (var i_cze = 1; i_cze <= a_cze - 2; i_cze++) {
+                document.write("*");
+                for (var j_cze = 1; j_cze <= b_cze - 2; j_cze++) {
+                    document.write("&nbsp;");
+                }
+                document.write("*<br>");
+            }
+            // Dolna krawędź
+            for (var i_cze = 1; i_cze <= b_cze; i_cze++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        </script>
+    </pre>
+</body>
+</html>

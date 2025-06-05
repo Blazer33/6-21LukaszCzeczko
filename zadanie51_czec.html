@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 51 - Łukasz Czeczko</title>
+</head>
+<body>
+    <div style="color:red;font-size:2cm;">Czeczko</div>
+    <div style="color:blue;font-size:5mm;">Wyprowadzanie inicjałów z przesunięciem</div>
+    <script language="JavaScript">
+        var ile_cze = parseInt(prompt("Podaj ile razy powtórzyć:", ""));
+        var inicjaly_cze = prompt("Podaj inicjały:", "");
+        for (var i_cze = 1; i_cze <= ile_cze; i_cze++) {
+            for (var k_cze = 1; k_cze <= i_cze; k_cze++) {
+                document.write("&nbsp;");
+            }
+            document.write(i_cze + "_" + inicjaly_cze + "_" + i_cze + "<br>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<body>
+    <h2>KOD HTML zadanie 39</h2>
+    <textarea cols="82" rows="35" id="test">
+        <!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 53 - Łukasz Czeczko</title>
+</head>
+<body>
+    <pre>
+        <script language="JavaScript">
+            var a_cze = parseInt(prompt("Podaj wysokość a:", ""));
+            var b_cze = parseInt(prompt("Podaj szerokość b:", ""));
+            // Górna krawędź
+            for (var i_cze = 1; i_cze <= b_cze; i_cze++) {
+                document.write("*");
+            }
+            document.write("<br>");
+            // Środek
+            for (var i_cze = 1; i_cze <= a_cze - 2; i_cze++) {
+                var wiersz_cze = "*";
+                for (var j_cze = 1; j_cze <= b_cze - 2; j_cze++) {
+                    wiersz_cze += "&nbsp;&nbsp;";
+                }
+                wiersz_cze += "*";
+                document.write(wiersz_cze + "<br>");
+            }
+            // Dolna krawędź
+            for (var i_cze = 1; i_cze <= b_cze; i_cze++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        </script>
+    </pre>
+</body>
+</html>

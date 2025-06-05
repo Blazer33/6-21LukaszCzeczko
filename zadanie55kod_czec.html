@@ -1,0 +1,43 @@
+<body>
+    <h2>KOD HTML zadanie 39</h2>
+    <textarea cols="82" rows="35" id="test">
+        <!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 55 - Łukasz Czeczko</title>
+</head>
+<body>
+    <div style="color:black;">
+        <script language="JavaScript">
+            do {
+                var l1_cze = parseInt(prompt("Podaj liczbę l1 (20-60):", ""));
+                if (l1_cze < 20 || l1_cze > 60) {
+                    document.write("Liczba l1 nie należy do przedziału <20,60><br>");
+                }
+            } while (l1_cze < 20 || l1_cze > 60);
+            do {
+                var l2_cze = parseInt(prompt("Podaj liczbę l2 (20-60):", ""));
+                if (l2_cze < 20 || l2_cze > 60) {
+                    document.write("Liczba l2 nie należy do przedziału <20,60><br>");
+                }
+            } while (l2_cze < 20 || l2_cze > 60);
+            var pocz_cze = parseInt(prompt("Podaj początkową wielkość tekstu:", ""));
+            var tekst_cze = prompt("Podaj tekst:", "");
+            if (l1_cze < l2_cze) {
+                for (var i_cze = pocz_cze; i_cze <= 100; i_cze += 5) {
+                    document.write('<p style="font-size:' + i_cze + 'px; color:black;">' + tekst_cze + '</p>');
+                }
+            } else if (l2_cze < l1_cze) {
+                for (var i_cze = pocz_cze; i_cze >= 0; i_cze -= 5) {
+                    document.write('<p style="font-size:' + i_cze + 'px; color:black;">' + tekst_cze + '</p>');
+                }
+            } else {
+                document.write('<p style="font-size:' + pocz_cze + 'px; color:black;">' + tekst_cze + '</p>');
+            }
+        </script>
+    </div>
+</body>
+</html>
